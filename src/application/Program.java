@@ -19,9 +19,8 @@ public class Program {
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
 		
-		// now we wont refer to the "PriceUpdate"
-		// cause now we can just refer as our new static method
-		list.forEach(Product::staticPriceUpdate);
+		//non static method reference
+		list.forEach(Product::nonStaticPriceUpdate);
 		
 		//print
 		//reference method para o println
