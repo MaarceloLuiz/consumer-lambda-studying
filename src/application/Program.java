@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Locale;
 
 import entities.Product;
-import util.PriceUpdate;
 
 public class Program {
 
@@ -20,10 +19,9 @@ public class Program {
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
 		
-		// metodo defaut na interface list:
-		//esse foreach recebe um "Consumer" como argumento
-		//o foreach vai percorrer a lista aplicando esse Consumer que nós estabelecemos
-		list.forEach(new PriceUpdate());
+		// now we wont refer to the "PriceUpdate"
+		// cause now we can just refer as our new static method
+		list.forEach(Product::staticPriceUpdate);
 		
 		//print
 		//reference method para o println
