@@ -22,12 +22,8 @@ public class Program {
 		
 		double factor = 1.1;
 		
-		//declaring a variable type Consumer
-		Consumer<Product> cons = p -> {
-			p.setPrice(p.getPrice() * factor);
-		};
-		
-		list.forEach(cons);
+		//inline lambda expression
+		list.forEach(p -> p.setPrice(p.getPrice() * factor));
 		
 		//print
 		//reference method para o println
